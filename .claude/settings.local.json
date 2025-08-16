@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(cp:*)",
+      "Bash(./deploy.sh)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(rm:*)",
+      "Bash(./check-install.sh:*)",
+      "WebFetch(domain:forums.kleientertainment.com)",
+      "Bash(dotnet build:*)",
+      "Bash(msbuild:*)",
+      "Bash(mono:*)",
+      "Bash(./manual-deploy.sh)",
+      "Bash(uuidgen)",
+      "Bash(/mnt/c/Windows/Microsoft.NET/Framework64/v4.0.30319/MSBuild.exe AIAgentPlugin.csproj /p:Configuration=Release /p:Platform=\"Any CPU\")",
+      "Bash(cat:*)",
+      "Bash(./force-rebuild.sh)",
+      "Bash(wget:*)",
+      "Bash(sudo dpkg:*)",
+      "Bash(sudo apt-get:*)",
+      "Bash(sudo apt-get install:*)",
+      "Bash(dotnet --version)",
+      "Bash(./generate-build-id.sh:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "/mnt/c/Users",
+      "/usr/bin"
+    ]
+  }
+}
