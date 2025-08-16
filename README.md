@@ -22,18 +22,18 @@ You need to copy the following DLL files from your ONI installation to the `Refe
 - `UnityEngine.dll`
 - `UnityEngine.CoreModule.dll`
 
-Copy these files to: `References/`
+Copy these files to: `references/`
 
 ### 2. Build the Plugin
 
 **Windows:**
 ```cmd
-build.bat
+scripts\build.bat
 ```
 
 **Linux/Mac:**
 ```bash
-./build.sh
+./scripts/build.sh
 ```
 
 Or manually:
@@ -48,9 +48,9 @@ dotnet build --configuration Release
    - Linux: `~/.config/unity3d/Klei/Oxygen Not Included/mods/Dev/AIAgentPlugin/`
 
 2. Copy the following files to the mod directory:
-   - `bin/Release/net40/AIAgentPlugin.dll`
-   - `mod_info.yaml`
-   - `mod.yaml`
+   - `build/bin/Release/net471/AIAgentPlugin.dll`
+   - `config/mod_info.yaml`
+   - `config/mod.yaml`
 
 ### 4. Launch the Game
 
@@ -63,14 +63,30 @@ Start Oxygen Not Included and check the debug log for the message:
 
 ```
 oni-ai-agent-plugin/
-├── Source/
-│   └── AIAgentPlugin.cs          # Main plugin loader
-├── References/                   # Game DLL references (you need to copy these)
+├── src/                          # Source code
+│   ├── Core/                     # Core plugin functionality
+│   │   ├── Mod.cs               # Main mod entry point
+│   │   └── AIAgentPlugin.cs     # Plugin loader
+│   ├── Agents/                   # AI agent implementations
+│   │   ├── AIAgent.cs           # Base agent class
+│   │   ├── HelloWorldAgent.cs   # Example agent
+│   │   ├── GPTAgent.cs          # GPT-powered agent
+│   │   └── AgentManager.cs      # Agent management
+│   ├── UI/                       # User interface components
+│   │   ├── AgentControlDialog.cs
+│   │   ├── SimpleConfigDialog.cs
+│   │   └── ... (other UI files)
+│   ├── Patches/                  # Harmony patches
+│   │   ├── MinimalSafePatches.cs
+│   │   └── NoKeyboardPatches.cs
+│   └── Config/                   # Configuration management
+│       └── AIAgentConfigManager.cs
+├── references/                   # Game DLL references (you need to copy these)
+├── docs/                         # Documentation and guides
+├── scripts/                      # Build and utility scripts
+├── build/                        # Build artifacts
+├── config/                       # Configuration files
 ├── AIAgentPlugin.csproj          # Project file
-├── mod_info.yaml                 # Mod metadata
-├── mod.yaml                      # Mod configuration
-├── build.bat                     # Windows build script
-├── build.sh                      # Linux/Mac build script
 └── README.md                     # This file
 ```
 
@@ -96,7 +112,7 @@ oni-ai-agent-plugin/
 3. **Create a Hello World Agent** to see the system in action
 4. **Monitor agent activity** through the logs and status display
 
-For detailed information about the AI agent system, see [AGENT_README.md](AGENT_README.md).
+For detailed information about the AI agent system, see [docs/AGENT_README.md](docs/AGENT_README.md).
 
 ## Development
 
@@ -120,7 +136,7 @@ public class MyCustomAgent : AIAgent
 }
 ```
 
-See [AGENT_README.md](AGENT_README.md) for complete development guide.
+See [docs/AGENT_README.md](docs/AGENT_README.md) for complete development guide.
 
 ## Notes
 

@@ -6,6 +6,8 @@
     <RootNamespace>AIAgentPlugin</RootNamespace>
     <Version>1.0.0</Version>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputPath>build\bin</OutputPath>
+    <IntermediateOutputPath>build\obj</IntermediateOutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -19,45 +21,42 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>References\Assembly-CSharp.dll</HintPath>
+      <HintPath>references\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>References\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>references\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>References\UnityEngine.dll</HintPath>
+      <HintPath>references\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>References\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>references\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>References\UnityEngine.UI.dll</HintPath>
+      <HintPath>references\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>References\Newtonsoft.Json.dll</HintPath>
+      <HintPath>references\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>References\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>references\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>References\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>references\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>References\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>references\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>References\UnityEngine.UnityWebRequestModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+
   </ItemGroup>
 
 </Project>
